@@ -4,7 +4,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    vardai = ["Giedrius Malinauskas", "Rugilė Černiauskaitė", "Vidmantas Zelmaitis"]
+    return render_template("index.html", sarasas=vardai)
 
 if __name__ == "__main__":
     app.run(debug=True)
